@@ -1,16 +1,16 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { getContacts, getIsLoading } from 'redux/contacts/contacts-selectors';
 import { fetchContacts } from 'redux/contacts/contacts-operations';
-import css from './App.module.css';
+import css from './myContacts.module.css';
 import ContactForm from './ContactForm';
 import ContactList from './ContactList';
-import Filter from './Filter';
-import Notification from './Notification';
+import Filter from './Filter/Filter';
+import Notification from 'components/Notification/Notification';
 
-import Loader from './Loader/Loader';
+import Loader from 'components/Loader/Loader';
 
-function App() {
+function  MyContacts() {
   const contacts = useSelector(getContacts);
   const isContacts = Boolean(contacts.length);
   const dispatch = useDispatch();
@@ -45,4 +45,4 @@ function App() {
 }
 
 
-export default App;
+export default  MyContacts;
