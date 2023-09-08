@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import {Navigate, Route, Routes } from 'react-router-dom';
 import Loader from 'components/Loader/Loader';
 
 const HomePage = lazy(() => import('pages/HomePage/HomePage'));
@@ -17,6 +17,7 @@ const UserRoutes = () => {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/contacts" element={<MyContactsPage />} />
+        <Route path="*" element={<Navigate to="/"/>} />
       </Routes>
     </Suspense>
   );

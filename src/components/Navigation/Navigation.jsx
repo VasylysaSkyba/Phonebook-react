@@ -1,23 +1,24 @@
-import { Link, NavLink } from 'react-router-dom';
-import NavbarAuth from './NavbarAuth/NavbarAuth';
+
+import { Link } from 'react-router-dom';
 
 import styles from './Navigation.module.css';
 
-const getClassName = ({ isActive }) => {
-  const className = isActive ? `${styles.link} ${styles.active}` : styles.link;
-  return className;
-};
+import NavBarMenu from './NavbarMenu/NavbarMenu';
+import NavbarAuth from './NavbarAuth/NavbarAuth';
+import NavbarUser from './NavbarUser/NavbarUser';
+import useAuth from 'shared/api/hooks/useAuth';
+
+
 
 const Navigation = () => {
+  const isLogin = useAuth();
   return (
     <nav className={styles.wrapper}>
      <Link className={styles.logo} to="/">
         Logo
       </Link>
-      <NavLink className={getClassName} to="/contacts">
-        My contacts
-      </NavLink>
-      <NavbarAuth />
+      {isLogin && <NavBarMenu />}
+      {isLogin ? <NavbarUser /> : <NavbarAuth />}
     </nav>
   );
 };

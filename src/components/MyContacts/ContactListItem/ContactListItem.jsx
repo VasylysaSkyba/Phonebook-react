@@ -3,7 +3,7 @@ import { deleteContact } from 'redux/contacts/contacts-operations';
 import css from './ContactListItem.module.css';
 import PropTypes from 'prop-types';
 
-const ContactListItem = ({ id, name, phone }) => {
+const ContactListItem = ({ id, name, number }) => {
   const dispatch = useDispatch();
 
   const onRemoveContact = payload => {
@@ -13,7 +13,7 @@ const ContactListItem = ({ id, name, phone }) => {
   return (
     <li className={css.item}>
       <p className={css.contact}>
-        {name} {phone}
+        {name} {number}
       </p>
       <button
         className={css.buttonDelete}
@@ -28,7 +28,7 @@ const ContactListItem = ({ id, name, phone }) => {
 
 ContactListItem.propTypes = {
   name: PropTypes.string.isRequired,
-  phone: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
 };
 
