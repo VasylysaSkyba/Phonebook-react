@@ -30,3 +30,9 @@
     color: #fff;
     outline: 2px solid #fff;
   }
+
+  .logo {
+    text-decoration: none;
+    color: #111112;
+    font-weight: bold;
+  }
