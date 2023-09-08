@@ -5,8 +5,8 @@ const Loader = () => {
   return (
     <div className={styles.overlay}>
       <Oval
-        height={80}
-        width={80}
+        height={120}
+        width={120}
         color="rgba(72, 157, 242, 1)"
         wrapperStyle={{}}
         wrapperClass=""
