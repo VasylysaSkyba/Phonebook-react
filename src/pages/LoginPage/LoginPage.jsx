@@ -1,27 +1,27 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { Navigate } from 'react-router-dom';
-import RegisterForm from 'components/RegisterForm/RegisterForm';
-import { signup } from 'redux/auth/auth-operations';
+import { login } from 'redux/auth/auth-operations';
 import { getAuthError, isAuth } from 'redux/auth/auth-selectors';
+import LoginForm from 'components/LoginForm/LoginForm';
 
-const RegisterPage = () => {
+const LoginPage = () => {
   const dispatch = useDispatch();
   const { status, message } = useSelector(getAuthError);
   const isLogin = useSelector(isAuth);
 
-  const onRegister = data => {
-    dispatch(signup(data));
+  const onLogin = data => {
+    dispatch(login(data));
   };
   if (isLogin) {
     return <Navigate to="/contacts" />;
   }
   return (
     <div>
-      <h2>Create your account</h2>
-      <RegisterForm onSubmit={onRegister} />
+      <h2>Login Page</h2>
+      <LoginForm onSubmit={onLogin} />
       {status && <p style={{ color: 'red' }}> {message}</p>}
     </div>
   );
 };
 
-export default RegisterPage;
+export default LoginPage;
