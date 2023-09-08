@@ -9,10 +9,9 @@ export const signup = createAsyncThunk(
       const result = await api.signup(data);
       return result;
     } catch ({ response }) {
-      const { status, data } = response;
+    
       const error = {
-        status,
-        message: data.message,
+        status: response.status,
       };
       return rejectWithValue(error);
     }
@@ -25,11 +24,23 @@ export const login = createAsyncThunk(
       const result = await api.login(data);
       return result;
     } catch ({ response }) {
-      const { status, data } = response;
+    
       const error = {
-        status,
-        message: data.message,
+        status: response.status,
       };
+      return rejectWithValue(error);
+    }
+  }
+);
+
+
+export const logout = createAsyncThunk(
+  'auth/logout',
+  async (_, { rejectWithValue }) => {
+    try {
+      const result = await api.logout();
+      return result;
+    } catch (error) {
       return rejectWithValue(error);
     }
   }
