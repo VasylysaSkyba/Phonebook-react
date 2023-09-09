@@ -13,7 +13,7 @@ const RegisterPage = () => {
   const onRegister = data => {
     dispatch(signup(data));
   };
- 
+
 
   return (
     <div className={styles.pagecontainer}>

@@ -1,15 +1,10 @@
-
 import { Link } from 'react-router-dom';
-
 import styles from './Navigation.module.css';
-
 import NavBarMenu from './NavbarMenu/NavbarMenu';
 import NavbarAuth from './NavbarAuth/NavbarAuth';
 import NavbarUser from './NavbarUser/NavbarUser';
 import useAuth from 'shared/api/hooks/useAuth';
 import { FcPhoneAndroid } from 'react-icons/fc';
-
-
 
 const Navigation = () => {
   const isLogin = useAuth();

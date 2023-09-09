@@ -7,15 +7,13 @@ import Loader from 'components/Loader/Loader';
 const HomePage = lazy(() => import('pages/HomePage/HomePage'));
 const RegisterPage = lazy(() => import('pages/RegisterPage/RegisterPage'));
 const LoginPage = lazy(() => import('pages/LoginPage/LoginPage'));
-const MyContactsPage = lazy(() =>
-  import('pages/MyContactsPage/MyContactsPage')
-);
+const MyContactsPage = lazy(() => import('pages/MyContactsPage/MyContactsPage'));
 
 const UserRoutes = () => {
   return (
     <Suspense fallback={<Loader />}>
       <Routes>
-      <Route element={<PublicRoute />}>
+        <Route element={<PublicRoute />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />

@@ -6,4 +6,5 @@ const MyContactsPage = () => {
     </div>
   );
 };
+
 export default MyContactsPage;

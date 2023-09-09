@@ -45,8 +45,8 @@ const ContactForm = () => {
     setNumber('');
   };
 
-  const onAddContact = ({ name, number}) => {
-    const action = addContact({ name, number});
+  const onAddContact = ({ name, number }) => {
+    const action = addContact({ name, number });
     dispatch(action);
   };
 

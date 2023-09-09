@@ -13,10 +13,10 @@ const LoginPage = () => {
   const onLogin = data => {
     dispatch(login(data));
   };
- 
+
   return (
     <div className={styles.pagecontainer}>
-    <h2>Login</h2>
+      <h2>Login</h2>
       <LoginForm onSubmit={onLogin} />
       {status && <p style={{ color: 'red' }}> Incorrect login or password</p>}
     </div>
