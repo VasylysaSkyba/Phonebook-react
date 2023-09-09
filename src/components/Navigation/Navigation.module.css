@@ -32,7 +32,14 @@
   }
 
   .logo {
-    text-decoration: none;
-    color: #111112;
-    font-weight: bold;
+    display: flex;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-70deg, rgb(49, 42, 15), #d4881f);
+
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }

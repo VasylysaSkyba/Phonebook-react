@@ -11,7 +11,7 @@ const RegisterForm = ({ onSubmit }) => {
   const { name, email, password } = state;
 
   return (
-    <form action="" onSubmit={handleSubmit}>
+    <form className={styles.form} action="" onSubmit={handleSubmit}>
       <div className={styles.group}>
         <label className={styles.label} htmlFor="">
           Username:
@@ -23,7 +23,7 @@ const RegisterForm = ({ onSubmit }) => {
           onChange={handleChange}
           className={styles.input}
           type="text"
-          placeholder="Enter username"
+          
           title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
           required
         />
@@ -38,7 +38,7 @@ const RegisterForm = ({ onSubmit }) => {
           onChange={handleChange}
           className={styles.input}
           type="email"
-          placeholder="Enter user email"
+          
           required
         />
       </div>
@@ -57,7 +57,9 @@ const RegisterForm = ({ onSubmit }) => {
         />
       </div>
       <div className={styles.group}>
-        <button type="submit">Registration</button>
+      <button className={styles.button} type="submit">
+          Registration
+        </button>
       </div>
     </form>
   );

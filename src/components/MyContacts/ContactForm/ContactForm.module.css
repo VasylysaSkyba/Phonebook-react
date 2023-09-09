@@ -48,8 +48,8 @@
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
       7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
     outline: none;
-    background-color: #777c81;
-    background-image: linear-gradient(315deg, #e26b1c 0%, #703c22 74%);
+    background-color: #b7820f;
+    background-image: linear-gradient(315deg, #d7a819 0%, #f9efb8 74%);
     line-height: 42px;
     padding: 0;
     border: none;
@@ -57,6 +57,6 @@
   
   .buttonAdd:hover,
   .buttonAdd:focus {
-    background-color: #0b0b0b;
-    background-image: linear-gradient(315deg, #e4c782 0%, #c98f75 74%);
+    background-color: #b7820f;
+    background-image: linear-gradient(315deg, #d7a819 0%, #f9efb8 74%);
   }

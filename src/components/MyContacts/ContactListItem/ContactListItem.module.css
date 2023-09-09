@@ -28,14 +28,14 @@
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
       7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
     outline: none;
-    background-color: #636a71;
-    background-image: linear-gradient(315deg, #f6b041 0%, #be570e 74%);
+    background-color: #b7820f;
+  background-image: linear-gradient(315deg, #d7a819 0%, #f9efb8 74%);
   
     border: none;
   }
   
   .buttonDelete:hover,
   .buttonDelete:focus {
-    background-color: #b8d6f9;
-    background-image: linear-gradient(315deg, #e4c782 0%, #c98f75 74%);
+    background-color: #b7820f;
+  background-image: linear-gradient(315deg, #d7a819 0%, #f9efb8 74%);
   }

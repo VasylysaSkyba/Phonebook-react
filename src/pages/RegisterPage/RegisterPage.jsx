@@ -1,3 +1,4 @@
+import styles from './RegisterPage.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { signup } from 'redux/auth/auth-operations';
@@ -15,7 +16,7 @@ const RegisterPage = () => {
  
 
   return (
-    <div>
+    <div className={styles.pagecontainer}>
       <h2>Create your account</h2>
       <RegisterForm onSubmit={onRegister} />
       {status && (
